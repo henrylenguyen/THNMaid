@@ -1,0 +1,91 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $flex-direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+.form {
+  background-image: url(../../images/details/form.jpg);
+  @include size(100%, 100vh);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &__Input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  form {
+    padding: 5rem;
+    font-size: 2rem;
+    max-width: 100%;
+    input,
+    select,
+    button,textarea {
+      font-size: 1.6rem;
+    }
+    button {
+      width: 50%;
+      background: linear-gradient(to left, #c4e538, #009432, #c4e538);
+      border: 1px solid var(--primary-color);
+      transition: all 0.6s ease !important;
+      background-size: 200%;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 3rem;
+      &:hover {
+        background-position: right;
+        border: 1px solid var(--primary-color);
+        color: #fff;
+      }
+    }
+  }
+}
+.details{
+  padding-top: 18rem;
+  &__content{
+    margin-top: 10rem;
+    h2{
+      color: #262626;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    h3{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #262626;
+
+    }
+    p{
+      padding-left: 2rem;
+    }
+    ul,ol{
+      padding-left: 5rem;
+    }
+    ul>li{
+      list-style: disc;
+    }
+    ol>li{
+      list-style: alpha;
+      &::marker{
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        font-variant-numeric: slashed-zero;
+        
+      }
+      
+    }
+  }
+}

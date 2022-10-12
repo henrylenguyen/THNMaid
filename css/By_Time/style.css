@@ -1,0 +1,76 @@
+.form {
+  background-image: url(../../images/details/form.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.form__Input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form form {
+  padding: 5rem;
+  font-size: 2rem;
+  max-width: 100%;
+}
+.form form input,
+.form form select,
+.form form button, .form form textarea {
+  font-size: 1.6rem;
+}
+.form form button {
+  width: 50%;
+  background: linear-gradient(to left, #c4e538, #009432, #c4e538);
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s ease !important;
+  background-size: 200%;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.form form button:hover {
+  background-position: right;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}
+
+.details {
+  padding-top: 18rem;
+}
+.details__content {
+  margin-top: 10rem;
+}
+.details__content h2 {
+  color: #262626;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.details__content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #262626;
+}
+.details__content p {
+  padding-left: 2rem;
+}
+.details__content ul, .details__content ol {
+  padding-left: 5rem;
+}
+.details__content ul > li {
+  list-style: disc;
+}
+.details__content ol > li {
+  list-style: alpha;
+}
+.details__content ol > li::marker {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-variant-numeric: slashed-zero;
+}
+
+/*# sourceMappingURL=style.css.map */
